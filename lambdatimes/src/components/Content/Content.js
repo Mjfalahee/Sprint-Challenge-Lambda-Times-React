@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousel from '../Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -23,7 +24,7 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    console.log('clicked this: ' + tab);
+    //console.log('clicked this: ' + tab);
      let newtab = tab
      this.setState( {selected: newtab} );
   };
@@ -60,6 +61,7 @@ export default class Content extends Component {
         <Tabs tabs={this.state.tabs}
          selectedTab={this.state.selected} 
          selectTabHandler={this.changeSelected} />
+         <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );
