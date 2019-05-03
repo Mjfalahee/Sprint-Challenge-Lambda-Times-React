@@ -8,13 +8,13 @@ const Tab = props => {
       console.log('Tab props');
       console.log(props);
       // console.log(props.tab);
-      let tab = props.tab;
+      //let tab = props.tab;
   if (props.tab === props.selectedTab) {
     return (
         <div
         className={'tab active-tab'}
         name={props.tab}
-        onClick={tab => {
+        onClick={() => {
           props.selectTabHandler(props.tab);
         }}
       >
@@ -27,7 +27,7 @@ const Tab = props => {
       <div
         className={'tab'}
         name={props.tab}
-        onClick={tab => {
+        onClick={() => {
           props.selectTabHandler(props.tab);
         }}
       >
