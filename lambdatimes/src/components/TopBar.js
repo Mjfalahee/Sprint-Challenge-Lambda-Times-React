@@ -58,6 +58,9 @@ const CenterContainer = styled.div`
 const CenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
+  &:hover {
+    text-decoration: underline;
+  }
   ${props => (props.type === 'last' ? `margin-right: 0;` : null)}
 `;
 const RightContainer = styled.div`
